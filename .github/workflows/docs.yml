@@ -35,7 +35,7 @@ jobs:
       - run: pnpm docs:build
       # Every #fragment link in the built site must point at an existing id.
       - run: pnpm check:doc-anchors
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         if: github.event_name != 'pull_request'
         with:
           path: docs/.vitepress/dist
